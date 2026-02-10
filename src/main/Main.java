@@ -3,6 +3,7 @@ package main;
 import com.com.stchool.ecommerce.ui.CustomerMenu;
 import com.stchool.ecommerce.model.Customer;
 import com.stschool.ecommerce.controller.CustomerController;
+import com.stschool.ecommerce.service.CustomerService;
 
 import java.util.Scanner;
 
@@ -17,8 +18,11 @@ public class Main {
                 CustomerMenu customerMenu = new CustomerMenu();
                 Customer customer = customerMenu.inputCustomerSignupDetails();
                 CustomerController customerController = new CustomerController();
-                customerController.handlingSignUp(customer);
-                        break;
+                Customer newCustomer = customerController.handleSignUp(customer);
+
+                CustomerService customerService = new CustomerService();
+                customerService.displayCustomerDetails(newCustomer);
+                break;
 
         }
 
