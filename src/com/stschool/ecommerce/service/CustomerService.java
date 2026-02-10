@@ -9,7 +9,6 @@ public class CustomerService {
             CustomerRepository customerRepository = new CustomerRepository();
             return customerRepository.addNewCustomer(customer);
 
-
         }
     public void displayCustomerDetails(Customer customer)
     {
