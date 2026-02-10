@@ -14,6 +14,7 @@ public class CustomerService {
     public void displayCustomerDetails(Customer customer)
     {
         System.out.println("Customer Details:" + customer);
+        System.out.println("Customer Id:" + customer.getId());
         System.out.println("Customer FirstName:" + customer.getFirstName());
         System.out.println("Customer lastName:" + customer.getLastName());
         System.out.println("Customer  Email: " + customer.getEmail());
